@@ -1,0 +1,157 @@
+<ion-view view-title="{{product_id}}">
+    <ion-content  style="height: 100% ; background-color:#ffffff;">
+
+
+        <div  class="list card" collection-repeat="img  in allImages">
+
+        <div class="item item-avatar">
+        <img src="{{img}}">
+        <!--<img ng-src="{{product.image_urls[0].link}}"/>-->
+        <h2><b>{{prod_name}}</b></h2>
+        <!--&lt;!&ndash;<h2>{{product.Name}}</h2>-->
+       <!--<p>Product-Code : {{product.id}}</p>-->
+        <!--</div>-->
+
+        <div class="item item-body" >
+
+
+        <!--<img  class="full-image" src="{{selected_image}}">-->
+            <div style="background-color: #ffffff;" >
+                <!--<ion-slide-box>-->
+                    <!--<ion-slide >-->
+
+                            <img  class="full-image" src="{{img}}">
+
+                    <!--</ion-slide>-->
+
+                <!--</ion-slide-box>-->
+            </div>
+
+
+
+
+            <!--<ion-scroll id="ionScrollRegion" direction="x" >-->
+
+                <!--<div class="list"   collection-repeat="image  in allImages | filter:filter | limitTo:10">-->
+                    <!--<table width="100%" style="border-right: 2px solid #666666;">-->
+                        <!--<tr style="display: inline-block ;" >-->
+                            <!--<td width="100%">-->
+                                <!--<a class="item my-item item-thumbnail-left"-->
+                                   <!--ng-href="#/app/prod/{{product.id}}">-->
+                                    <!--<img class="full-image" ng-src="{{image}}">-->
+                                <!--</a>-->
+                            <!--</td>-->
+                            <!--<!--<td width="50%"  style="border-right: 2px solid #666666;">-->
+                                <!--<!--<h5>  Product-Name:   {{product.Name}}</h5>-->
+                                <!--<!--<p>  Product-Code : {{product.id}}</p>-->
+                            <!--<!--</td>-->
+                        <!--</tr>-->
+                    <!--</table>-->
+                <!--</div>-->
+            <!--</ion-scroll>-->
+            <!--<ion-slide-box>-->
+
+                <!--<ion-slide>-->
+
+                        <!--<img style="width: 100%" src="http://cdn-new-annectos.s3.amazonaws.com/images/bigbanner/grass/5.jpg" >-->
+
+                <!--</ion-slide>-->
+
+            <!--</ion-slide-box>-->
+
+        </div>
+        </div>
+
+
+        </div>
+        <div  class="list card" >
+
+            <div class="item item-body" >
+
+
+            <p class="trim-info" ng-bind-html="description | unsafe">
+
+            </p>
+                </div>
+                </div>
+
+        <div  class="list card" >
+<h4 style="text-align: center">Price Details</h4>
+            <div class="item item-body" >
+
+            <table>
+                <tr >
+                    <td><b>Quantity &nbsp;&nbsp;&nbsp;&nbsp;</b></td>
+                    <td> <b>Price(INR) &nbsp;&nbsp; &nbsp;&nbsp;</b></td>
+                    <td><b> Discount % </b></td>
+
+                </tr>
+
+                <tr  data-ng-repeat="op in product_price" >
+                    <td>{{op.min_qty}}-{{op.max_qty}}</td>
+                    <td>{{op.final_offer}}</td>
+                    <td>{{op.discount}}</td>
+
+                </tr>
+
+            </table>
+                </div>
+            </div>
+
+        <div  class="list card" >
+
+            <div class="item item-body" >
+
+
+                <p>
+                 Grass
+                </p>
+            </div>
+        </div>
+
+    </ion-content>
+
+    <ion-footer-bar style="height: 60px"  >
+        <!--<div class="buttons">-->
+        <!--<button class="button">Left Button</button>-->
+        <!--</div>-->
+        <a  class="button" style="border-color: #0c63ee;background-color: #387ef5;width: 100% ;text: #ffffff" href= "#/app/enquiry/{{prod_id}}" >
+            <h4 style="color: #ffffff ;text-shadow: 2px 2px 8px #5d5d5d">Enquire Now</h4>
+        </a>
+    </ion-footer-bar>
+</ion-view>
+
+
+        <!--<p>-->
+        <!--<!--<a href="#" class="subdued">1 Like</a>-->
+        <!--<!--<a href="#" class="subdued">5 Comments</a>-->
+        <!--</p>-->
+        <!--<div class="item item-body">-->
+        <!--<ion-slide-box  pager-click="navSlide(index)" auto-play="true" does-continue="true">-->
+
+
+        <!--<ion-slide  ng-repeat="pic in prod_details.image_urls">-->
+        <!--<img style="width: 100%" src="{{selected_image}}">-->
+        <!--</ion-slide>-->
+
+        <!--</ion-slide-box>-->
+        <!--</div>-->
+
+
+        <!--<div class="list" collection-repeat="product in product_lists | filter:filter">-->
+            <!--<a class="item my-item item-thumbnail-left"-->
+
+               <!--collection-item-height="90"-->
+               <!--collection-item-width="'100%'"-->
+               <!--ui-sref="tabs.detail({petsId: pet.id })">-->
+                <!--<img ng-src="{{product.image_urls[0].link}}">-->
+                <!--<h2>{{product.Name}}</h2>-->
+                <!--<p>{{product.description}}</p>-->
+                <!--<h2>{{product.Name}}</h2>-->
+                <!--<p>{{product.description}}</p>-->
+                <!--<p>Product-Code : {{product.id}}</p>-->
+
+            <!--</a>-->
+
+        <!--</div>-->
+

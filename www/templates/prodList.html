@@ -1,0 +1,32 @@
+<ion-view view-title="{{product_title}}">
+    <ion-content  style=" background-color:#ffffff;">
+
+
+
+        <div class="list" collection-repeat="product in product_lists | filter:filter">
+           <table   style="width: 100% ; border-bottom: 1px solid #666666;">
+               <tr  style="display: inline-block ; border-bottom: 1px solid #666666;width: 100% " >
+                   <td style="width: 50% ; padding-bottom: 15px ; padding-top : 10px !important;">
+                     <a  style="border-bottom: 1px solid #666666;!important;" ng-href="#/app/prod/{{product.id}}">
+                      <img style='width: 110px; height: 130px' ng-src="{{product.image_urls[0].link}}">
+                     </a>
+                   </td>
+
+                   <td style="width: 50% ; padding-bottom: 10px ;  !important;">
+                       <a style="text-decoration: none !important;" ng-href="#/app/prod/{{product.id}}" >
+                       <h5><b style="font-family:'Trebuchet MS', Sans-Serif">Name: </b>{{product.Name}}</h5>
+                       <h5><b style="font-family:'Trebuchet MS', Sans-Serif">Product-Code : </b>{{product.id}}</h5>
+                       <h5><b style="font-family:'Trebuchet MS', Sans-Serif"> MRP : </b>INR {{product.price[0].mrp}}</h5>
+                       <h5><b style="font-family:'Trebuchet MS', Sans-Serif">Price Range:</b> INR {{product.price[0].list}} - {{product.price[3].list}}</h5>
+                      </a>
+                  </td>
+               </tr>
+           </table>
+        </div>
+
+
+
+
+
+    </ion-content>
+</ion-view>

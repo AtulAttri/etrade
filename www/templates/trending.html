@@ -1,0 +1,38 @@
+<ion-view view-title="New Arrivals" style="background-color:#ffffff;">
+    <ion-pane ng-controller="CardsCtrl" style=" background-color:#ffffff;">
+        <ion-header-bar class="bar-transparent">
+            <h1 class="title">Help Out</h1>
+        </ion-header-bar>
+
+        <swipe-cards on-card-swipe="onSwipe($event)" style=" background-color:#ffffff;" >
+
+            <swipe-cards>
+                <swipe-card on-card-swipe="cardSwiped()" id="start-card">
+                    Swipe down for The Latest Product
+                </swipe-card>
+                <swipe-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-card-swipe="cardSwiped($index)">
+
+                    <div ng-controller="CardCtrl">
+                        <div class="title">
+                            {{card.title}}
+                        </div>
+                        <div class="image">
+                            <img ng-src="{{card.image}}">
+                        </div>
+                        <div class="button-bar">
+                            <a href= "#/app/enquiry/{{card.code}}" style="width: 100%">
+                                <button class="button button-full button-positive" >
+                                  Enquire Now
+
+
+
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </swipe-card>
+            </swipe-cards>
+        </swipe-cards>
+    </ion-pane>
+
+</ion-view>

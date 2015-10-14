@@ -1,0 +1,26 @@
+<ion-view view-title="Categories">
+  <ion-content>
+
+
+      <ion-list class="list-calm">
+          <div ng-repeat="menu in menus track by $index">
+              <ion-item class="item-stable"
+                        ng-click="toggleGroup(menu)"
+                        ng-class="{active: isGroupShown(menu)}">
+                  <i class="icon" ng-class="isGroupShown(menu) ? 'ion-minus' : 'ion-plus'"></i>
+                  &nbsp;
+                   {{menu.name.toUpperCase() }}
+              </ion-item>
+              <ion-item class="item-accordion"
+                        ng-repeat="item in menu.menu_items"
+
+                        ng-show="isGroupShown(menu) "  href="#/app/prodList/{{item.link}}/{{item.name}}">
+
+                  {{item.name}}
+              </ion-item>
+          </div>
+      </ion-list>
+
+
+  </ion-content>
+</ion-view>
